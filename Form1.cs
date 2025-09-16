@@ -13,16 +13,8 @@ namespace Assignment4._1._2
         private void NumberButtonClicked(object sender, EventArgs e)
         {
             // This code will be executed when any of the subscribed buttons are clicked.
-            Button? clickedButton = sender as Button; // Cast sender to Button to identify which button was clicked
-
-            if (string.IsNullOrEmpty(resultTextBox.Text))
-            {
-                resultTextBox.Text = clickedButton.Text;
-            }
-            else
-            {
-                resultTextBox.Text += clickedButton.Text;
-            }
+            Button? clickedButton = sender as Button; // Cast sender to Button to identify which button was clicked            
+            resultTextBox.Text += clickedButton.Text;
         }
         // Store the first number and the selected operator, then clear the display for the second number.
         private void OperationButtonClicked(object sender, EventArgs e)
